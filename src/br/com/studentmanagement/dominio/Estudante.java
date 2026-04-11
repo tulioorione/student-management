@@ -1,12 +1,12 @@
-package br.com.student.management.dominio;
+package br.com.studentmanagement.dominio;
 
 public class Estudante {
-    String nome;
-    String matricula;
-    double[] notas;
-    int totalNotas;
+    public String nome;
+    public String matricula;
+    public double[] notas;
+    public int totalNotas;
 
-    void adicionarNota(double nota){
+    public void adicionarNota(double nota){
         if(totalNotas >= notas.length) {
             System.out.println("Limite de notas atingido para o estudante "+ nome);
             return;
@@ -15,7 +15,7 @@ public class Estudante {
         totalNotas++;
     }
 
-    double calcularMedia(){
+    public double calcularMedia(){
         if(totalNotas == 0){
             return 0;
         }
@@ -26,7 +26,7 @@ public class Estudante {
         return soma / totalNotas;
     }
 
-    void exibirInformacoes() {
+    public void exibirInformacoes() {
         System.out.println("=== Informações do Estudante ===");
         System.out.printf("Nome: %s%n", nome);
         System.out.printf("Matrícula: %s%n", matricula);
@@ -45,7 +45,7 @@ public class Estudante {
         }
     }
 
-    String verificarSituacao(double mediaMinima) {
+    public String verificarSituacao(double mediaMinima) {
         if(totalNotas == 0){
             return "Sem notas registradas";
         }
@@ -55,12 +55,10 @@ public class Estudante {
         return "Reprovado";
     }
 
-    void inicializar(String nomeEstudante, String matriculaEstudante, int capacidadeNotas){
+    public void inicializar(String nomeEstudante, String matriculaEstudante, int capacidadeNotas){
         nome = nomeEstudante;
         matricula = matriculaEstudante;
         notas = new double[capacidadeNotas];
         totalNotas = 0;
     }
-
-
 }
