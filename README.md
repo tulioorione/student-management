@@ -1,3 +1,6 @@
+
+
+<img width="1280" height="1544" alt="student_management_system_flowchart" src="https://github.com/user-attachments/assets/a2a02306-9b68-4c18-9be8-e96d1f450e04" />
 # Student Management System
 
 Sistema de gerenciamento de estudantes desenvolvido em Java puro, sem frameworks.
