@@ -1,5 +1,7 @@
 package br.com.studentmanagement.repositorio;
 
+import br.com.studentmanagement.dominio.Estudante;
+
 public class EstudanteRepositorio {
     Estudante[] estudantes;
     int totalEstudantes;
