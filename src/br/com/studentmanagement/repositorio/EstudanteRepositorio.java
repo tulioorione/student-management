@@ -1,7 +1,5 @@
 package br.com.studentmanagement.repositorio;
 
-import br.com.studentmanagement.dominio.Estudante;
-
 public class EstudanteRepositorio {
     Estudante[] estudantes;
     int totalEstudantes;
@@ -17,8 +15,8 @@ public class EstudanteRepositorio {
             return false;
         }
 
-        if (buscarPorMatricula(estudante.matricula) != null){
-            System.out.println("Já existe um estudante com a matrícula "+ estudante.matricula);
+        if (buscarPorMatricula(estudante.getMatricula()) != null){
+            System.out.println("Já existe um estudante com a matrícula "+ estudante.getMatricula());
             return false;
         }
 
@@ -29,7 +27,7 @@ public class EstudanteRepositorio {
 
     public Estudante buscarPorMatricula(String matricula) {
         for (int i = 0; i < totalEstudantes; i++) {
-            if(estudantes[i].matricula.equals(matricula)){
+            if(estudantes[i].getMatricula().equals(matricula)){
                 return estudantes[i];
             }
         }
@@ -38,7 +36,7 @@ public class EstudanteRepositorio {
 
     public boolean removerEstudante(String matricula) {
         for (int i = 0; i < totalEstudantes; i++) {
-            if (estudantes[i].matricula.equals(matricula)){
+            if (estudantes[i].getMatricula().equals(matricula)){
                 estudantes[i] = estudantes[totalEstudantes -1];
                 estudantes[totalEstudantes - 1] = null;
                 totalEstudantes--;
@@ -58,8 +56,8 @@ public class EstudanteRepositorio {
         for (int i = 0; i < totalEstudantes; i++) {
             System.out.printf("%d. %s (Matricula: %s) - Media: %.1f%n",
                     i+1,
-                    estudantes[i].nome,
-                    estudantes[i].matricula,
+                    estudantes[i].getNome(),
+                    estudantes[i].getMatricula(),
                     estudantes[i].calcularMedia());
         }
     }

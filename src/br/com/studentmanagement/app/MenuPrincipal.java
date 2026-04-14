@@ -72,7 +72,7 @@ public class MenuPrincipal {
             System.out.println("Estudante não encontrado.");
             return;
         }
-        System.out.printf("Encontrado: %s (Matrícula: %s)%n", estudante.nome, estudante.matricula);
+        System.out.printf("Encontrado: %s (Matrícula: %s)%n", estudante.getNome(), estudante.getMatricula());
     }
 
     static void adicionarNota(Scanner scanner, EstudanteRepositorio repositorio){
@@ -91,7 +91,7 @@ public class MenuPrincipal {
 
         estudante.adicionarNota(nota);
         System.out.printf("Nota %.1f adiciona para %s. Média atual: %.1f%n",
-                nota, estudante.nome, estudante.calcularMedia());
+                nota, estudante.getNome(), estudante.calcularMedia());
     }
 
     static void verDetalhes(Scanner scanner, EstudanteRepositorio repositorio){

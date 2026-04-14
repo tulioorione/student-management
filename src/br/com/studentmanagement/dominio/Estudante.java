@@ -1,10 +1,21 @@
 package br.com.studentmanagement.dominio;
 
 public class Estudante {
-    public String nome;
-    public String matricula;
-    public double[] notas;
-    public int totalNotas;
+    private String nome;
+    private String matricula;
+    private double[] notas;
+    private int totalNotas;
+
+    public String getNome(){ return this.nome; }
+    public void setNome(String nome){
+        if (nome == null || nome.trim().isEmpty()) {
+            System.out.println("Nome não pode ser vazio.");
+            return;
+        }
+        this.nome = nome;
+    }
+
+    public String getMatricula(){ return this.matricula; }
 
     public void adicionarNota(double nota){
         if(totalNotas >= notas.length) {
@@ -55,9 +66,9 @@ public class Estudante {
         return "Reprovado";
     }
 
-    public void inicializar(String nomeEstudante, String matriculaEstudante, int capacidadeNotas){
-        nome = nomeEstudante;
-        matricula = matriculaEstudante;
+    public void inicializar(String nome, String matricula, int capacidadeNotas){
+        this.setNome(nome);
+        this.matricula = matricula;
         notas = new double[capacidadeNotas];
         totalNotas = 0;
     }
