@@ -42,12 +42,15 @@ src/
 - Formatação com printf
 - Entrada de dados com Scanner (tratamento do buffer com nextLine)
 - Remoção otimizada em array com swap pelo último elemento — O(1)
+- Encapsulamento: atributos private com getters/setters e validação
+- Construtores com sobrecarga e constructor chaining (this())
+- Modificador static para contador de instâncias
 
 ## Roadmap
 
 Este projeto será evoluído conforme novos conceitos forem aprendidos:
 
-- [ ] Encapsulamento com getters/setters e construtores
+- [x] Encapsulamento com getters/setters e construtores
 - [ ] Refatoração de arrays para ArrayList
 - [ ] Tratamento de exceções (try/catch)
 - [ ] Persistência com banco de dados
