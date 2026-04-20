@@ -56,11 +56,21 @@ Este projeto será evoluído conforme novos conceitos forem aprendidos:
 - [ ] Persistência com banco de dados
 - [ ] API REST com Spring Boot
 
+## Status do Projeto
+
+🟢 **Em desenvolvimento ativo** — projeto-âncora dos meus estudos em Java backend. Atualmente focado na refatoração para Collections e tratamento de exceções. Próxima grande etapa: persistência com JPA/Hibernate e migração para Spring Boot.
+
+## Autor
+
+**Túlio Orione** — Desenvolvedor Backend Júnior em formação  
+📧 tulioorione@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/tulio-orione-7b89a2329)
+
 ## Como Executar
 
 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/student-management.git
+git clone https://github.com/tulioorione/student-management.git
 ```
 
 2. Abra o projeto no IntelliJ IDEA (ou sua IDE preferida)
