@@ -5,6 +5,19 @@ public class Estudante {
     private String matricula;
     private double[] notas;
     private int totalNotas;
+    private static int totalEstudantesCriados = 0;
+
+    public Estudante(String nome, String matricula, int capacidadeNotas){
+        this.setNome(nome);
+        this.matricula = matricula;
+        this.notas = new double[capacidadeNotas];
+        this.totalNotas = 0;
+        totalEstudantesCriados++;
+    }
+
+    public Estudante(String nome, String matricula){
+        this(nome, matricula, 10);
+    }
 
     public String getNome(){ return this.nome; }
     public void setNome(String nome){
@@ -14,8 +27,6 @@ public class Estudante {
         }
         this.nome = nome;
     }
-
-    public String getMatricula(){ return this.matricula; }
 
     public void adicionarNota(double nota){
         if(totalNotas >= notas.length) {
@@ -66,10 +77,10 @@ public class Estudante {
         return "Reprovado";
     }
 
-    public void inicializar(String nome, String matricula, int capacidadeNotas){
-        this.setNome(nome);
-        this.matricula = matricula;
-        notas = new double[capacidadeNotas];
-        totalNotas = 0;
+    public String getMatricula(){ return this.matricula; }
+
+    public static int getTotalEstudantesCriados(){
+        return totalEstudantesCriados;
     }
+
 }

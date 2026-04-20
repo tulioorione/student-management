@@ -6,11 +6,11 @@ public class EstudanteRepositorio {
     Estudante[] estudantes;
     int totalEstudantes;
 
-    public void inicializar(int capacidade) {
-        estudantes = new Estudante[capacidade];
-        totalEstudantes = 0;
-
+    public EstudanteRepositorio(int capacidade){
+        this.estudantes = new Estudante[capacidade];
+        this.totalEstudantes = 0;
     }
+
     public boolean adicionarEstudante(Estudante estudante){
         if (totalEstudantes >= estudantes.length){
             System.out.println("Repositório cheio. Não é possivel adicionar mais estudantes.");

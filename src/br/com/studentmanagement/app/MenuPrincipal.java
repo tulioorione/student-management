@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class MenuPrincipal {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        EstudanteRepositorio repositorio = new EstudanteRepositorio();
-        repositorio.inicializar(50);
+        EstudanteRepositorio repositorio = new EstudanteRepositorio(50);
 
         int opcao = -1;
 
@@ -55,11 +54,12 @@ public class MenuPrincipal {
         int capacidade = scanner.nextInt();
         scanner.nextLine();
 
-        Estudante estudante = new Estudante();
-        estudante.inicializar(nome, matricula, capacidade);
+        Estudante estudante = new Estudante(nome, matricula, capacidade);
 
         if(repositorio.adicionarEstudante(estudante)) {
             System.out.println("Estudante cadastrado com sucesso!");
+            System.out.printf("Total de estudantes criados no sistema: %d%n",
+                    Estudante.getTotalEstudantesCriados());
         }
     }
 
