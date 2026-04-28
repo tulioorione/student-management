@@ -73,6 +73,6 @@ Este projeto será evoluído conforme novos conceitos forem aprendidos:
 git clone https://github.com/tulioorione/student-management.git
 ```
 
-2. Abra o projeto no IntelliJ IDEA (ou sua IDE preferida)
+2. Abra o projeto no IntelliJ IDEA
 3. Marque a pasta `src` como Sources Root
 4. Execute a classe `MenuPrincipal`
