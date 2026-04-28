@@ -13,6 +13,7 @@ public class Curso {
         this.codigo = codigo;
         this.mediaMinima = mediaMinima;
         this.estudantes = new Estudante[capacidadeEstudantes];
+        this.totalEstudantes = 0;
         totalCursosCriados++;
     }
 

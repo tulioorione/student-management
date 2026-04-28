@@ -1,7 +1,5 @@
 package br.com.studentmanagement.dominio;
 
-import java.util.SplittableRandom;
-
 public class Estudante {
     private String nome;
     private String matricula;

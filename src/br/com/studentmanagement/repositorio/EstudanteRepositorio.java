@@ -3,8 +3,8 @@ package br.com.studentmanagement.repositorio;
 import br.com.studentmanagement.dominio.Estudante;
 
 public class EstudanteRepositorio {
-    Estudante[] estudantes;
-    int totalEstudantes;
+    private Estudante[] estudantes;
+    private int totalEstudantes;
 
     public EstudanteRepositorio(int capacidade){
         this.estudantes = new Estudante[capacidade];
