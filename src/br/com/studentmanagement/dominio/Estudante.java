@@ -1,11 +1,14 @@
 package br.com.studentmanagement.dominio;
 
+import java.util.SplittableRandom;
+
 public class Estudante {
     private String nome;
     private String matricula;
     private double[] notas;
     private int totalNotas;
     private static int totalEstudantesCriados = 0;
+    private Curso curso;
 
     public Estudante(String nome, String matricula, int capacidadeNotas){
         this.setNome(nome);
@@ -52,6 +55,9 @@ public class Estudante {
         System.out.println("=== Informações do Estudante ===");
         System.out.printf("Nome: %s%n", nome);
         System.out.printf("Matrícula: %s%n", matricula);
+        if(curso != null){
+            System.out.printf("Curso: %s (%s)%n", curso.getNome(), curso.getCodigo());
+        }
         System.out.printf("Notas registradas: %d de %d%n", totalNotas, notas.length);
 
         if(totalNotas > 0){
@@ -76,6 +82,13 @@ public class Estudante {
         }
         return "Reprovado";
     }
+    // Sobrecarregando o método.
+    public String verificarSituacao(){
+        if(curso == null){
+            return verificarSituacao(7.0);
+        }
+        return verificarSituacao(curso.getMediaMinima());
+    }
 
     public String getMatricula(){ return this.matricula; }
 
@@ -83,4 +96,6 @@ public class Estudante {
         return totalEstudantesCriados;
     }
 
+    public Curso getCurso() { return curso; }
+    public void setCurso(Curso curso) { this.curso = curso; }
 }
